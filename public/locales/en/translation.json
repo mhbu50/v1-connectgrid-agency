@@ -1,0 +1,52 @@
+{
+  "nav": {
+    "services": "Services",
+    "ourWork": "Our Work",
+    "caseStudies": "Case Studies",
+    "packages": "Packages",
+    "about": "About",
+    "blog": "Blog",
+    "careers": "Careers",
+    "contact": "Contact",
+    "letsTalk": "Let's Talk",
+    "language": "العربية"
+  },
+  "hero": {
+    "title": "Driving Growth Through Digital Excellence",
+    "subtitle": "ConnectGrid is your strategic partner in navigating the digital landscape. We craft data-driven marketing solutions that deliver measurable results and accelerate your business growth.",
+    "cta": "Get a Free Consultation"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive solutions to elevate your brand.",
+    "grid": {
+      "digitalStrategy": "Digital Marketing Strategy",
+      "socialMedia": "Social Media Management",
+      "seo": "Search Engine Optimization (SEO)",
+      "ppc": "Pay-Per-Click Advertising (PPC)",
+      "contentMarketing": "Content Marketing",
+      "webDesign": "Web Design & Development"
+    }
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Trusted by businesses that demand results."
+  },
+  "portfolio": {
+    "title": "Our Recent Work",
+    "subtitle": "Explore how we've helped businesses like yours succeed.",
+    "viewCaseStudy": "View Case Study"
+  },
+  "cta": {
+    "title": "Ready to Grow Your Business?",
+    "subtitle": "Let's build something great together. Contact us today to discuss your project and see how we can help you achieve your goals.",
+    "button": "Schedule a Call"
+  },
+  "footer": {
+    "description": "ConnectGrid is a full-service digital marketing agency dedicated to helping businesses grow.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Info",
+    "address": "Saudi Arabia, Riyadh, Olaya",
+    "copyright": "© 2024 ConnectGrid. All rights reserved."
+  }
+}
