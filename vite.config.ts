@@ -1,45 +1,39 @@
 import { defineConfig } from 'vite'
-import path from "path"
+import path from 'path'
 import react from '@vitejs/plugin-react'
 
-import { cloudflare } from "@cloudflare/vite-plugin";
+// ✅ No Cloudflare plugin — fully compatible with Bun & Node
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), cloudflare()],
+  plugins: [react()],
   build: {
     minify: true,
-    sourcemap: 'inline', // Use inline source maps for better error reporting
+    sourcemap: 'inline', // Better error reporting
     rollupOptions: {
       output: {
-        sourcemapExcludeSources: false, // Include original source in source maps
+        sourcemapExcludeSources: false, // Include original source
       },
     },
   },
-  // Enable source maps in development too
   css: {
-    devSourcemap: true,
+    devSourcemap: true, // Enable source maps in dev
   },
   server: {
     allowedHosts: true,
   },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
-      "@shared": path.resolve(__dirname, "./shared"),
+      '@': path.resolve(__dirname, './src'),
+      '@shared': path.resolve(__dirname, './shared'),
     },
   },
   optimizeDeps: {
-    // This is still crucial for reducing the time from when `bun run dev`
-    // is executed to when the server is actually ready.
     include: ['react', 'react-dom', 'react-router-dom'],
-    exclude: ['agents'], // Exclude agents package from pre-bundling due to Node.js dependencies
+    exclude: ['agents'], // Avoid pre-bundling Node-dependent package
     force: true,
   },
   define: {
-    // Define Node.js globals for the agents package
-    global: 'globalThis',
+    global: 'globalThis', // Support Node-style globals
   },
-  // Clear cache more aggressively
-  cacheDir: 'node_modules/.vite'
+  cacheDir: 'node_modules/.vite', // Clear cache more aggressively
 })
